@@ -21,6 +21,7 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid Grid.Row="0" VerticalAlignment="Top">
                 <Grid.ColumnDefinitions>
@@ -89,6 +90,9 @@
             </Grid>
             <Grid Grid.Row="8" VerticalAlignment="Stretch">
                 <Button x:Name="Rooms" Content="Räume" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid Grid.Row="9" VerticalAlignment="Stretch">
+                <Button x:Name="tst" Content="Testeintrag" HorizontalAlignment="Stretch" VerticalAlignment="Center"/>
             </Grid>
         </Grid>
 
