@@ -14,6 +14,16 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="100"/>
         </Grid.ColumnDefinitions>
+        <Grid HorizontalAlignment="stretch" VerticalAlignment="Stretch" ShowGridLines="false" Grid.Column="0">
+            <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+                <WrapPanel HorizontalAlignment="center" VerticalAlignment="Top" DockPanel.Dock="top">
+                    <Border BorderThickness="2" BorderBrush="Red"/>
+                    <Image x:Name="Warning" Source="Images\Warning-WF.png"  HorizontalAlignment="center" VerticalAlignment="center" Height="20" Width="20"/>
+                    <Label Content="Überlauf Grauwasser" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                </WrapPanel>
+                <Label Content="...to be done..."  HorizontalAlignment ="Center" VerticalAlignment ="Center" Foreground="White"/>
+            </DockPanel>
+        </Grid>
         <Grid HorizontalAlignment="Right" VerticalAlignment="Stretch" ShowGridLines="false" Grid.Column="1">
                 <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
