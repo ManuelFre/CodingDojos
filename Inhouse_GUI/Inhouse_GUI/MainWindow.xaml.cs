@@ -35,6 +35,47 @@ namespace Inhouse_GUI
                 int.Parse(tboPosY.Text),
                 int.Parse(tboHeight.Text),
                 int.Parse(tboWidth.Text)));
+
+            dgrGrid.ItemsSource = null;
+            dgrGrid.ItemsSource = Shapes;
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)           //löschen
+        {
+
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)           //zeichnen
+        {
+            var temp= ((GeoObject)dgrGrid.SelectedItem);
+            Shape geoObject = null;
+            switch (temp.Shape)
+            {
+                case "Rechteck":
+                    geoObject = new Rectangle()
+                    {
+                        Height = temp.Height,
+                        Width = temp.Width,
+                        Stroke = new SolidColorBrush(Colors.Red),
+                        StrokeThickness = 1
+                    };
+                    break;
+                case "Kreis":
+                    geoObject = new Ellipse()
+                    {
+                        Height = temp.Height,
+                        Width = temp.Width,
+                        Stroke = new SolidColorBrush(Colors.Red),
+                        StrokeThickness = 1
+                    };                  
+                    break;
+                default:
+                    break;
+            }
+            cvsCanvas.Children.Add(geoObject);
+            geoObject.SetValue(Canvas.TopProperty, (double)temp.PosX);       //X und Y Position sind Eigenschaften von Parent- Objekt (Canvas). Deshalb kann das nicht direkt in der Ellipse bzw. Rechteck gesetzt werden. 
+            geoObject.SetValue(Canvas.LeftProperty, (double)temp.PosY);
+
         }
     }
 }
