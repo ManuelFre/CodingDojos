@@ -25,23 +25,22 @@
                 <RowDefinition Height="20*"/>
                 <RowDefinition Height="50*"/>
             </Grid.RowDefinitions>
-            <Label Content="Form" Grid.Row="0" Grid.Column="0" HorizontalAlignment="center" VerticalAlignment="center"/>
-            <ComboBox Grid.Row="0" Grid.Column="1" Margin="10" Height="20"/>
+            <Label  Content="Form" Grid.Row="0" Grid.Column="0" HorizontalAlignment="center" VerticalAlignment="center"/>
+            <ComboBox x:Name="cboForm" Grid.Row="0" Grid.Column="1" Margin="10" Height="20"/>
 
-            <Label Content="Pos X" Grid.Row="1" Grid.Column="0" HorizontalAlignment="center" VerticalAlignment="center"/>
-            <TextBox Grid.Row="1" Grid.Column="1" Margin="10" Height="20"/>
+            <Label  Content="Pos X" Grid.Row="1" Grid.Column="0" HorizontalAlignment="center" VerticalAlignment="center"/>
+            <TextBox x:Name="tboPosX" Grid.Row="1" Grid.Column="1" Margin="10" Height="20"/>
 
-            <Label Content="Pos Y" Grid.Row="2" Grid.Column="0" HorizontalAlignment="center" VerticalAlignment="center"/>
-            <TextBox Grid.Row="2" Grid.Column="1" Margin="10" Height="20"/>
+            <Label  Content="Pos Y" Grid.Row="2" Grid.Column="0" HorizontalAlignment="center" VerticalAlignment="center"/>
+            <TextBox x:Name="tboPosY" Grid.Row="2" Grid.Column="1" Margin="10" Height="20"/>
 
             <Label Content="Breite" Grid.Row="3" Grid.Column="0" HorizontalAlignment="center" VerticalAlignment="center"/>
-            <TextBox Grid.Row="3" Grid.Column="1" Margin="10" Height="20"/>
+            <TextBox x:Name="tboWidth" Grid.Row="3" Grid.Column="1" Margin="10" Height="20"/>
 
             <Label Content="Länge" Grid.Row="4" Grid.Column="0" HorizontalAlignment="center" VerticalAlignment="center"/>
-            <TextBox Grid.Row="4" Grid.Column="1" Margin="10" Height="20"/>
+            <TextBox x:Name="tboHeight" Grid.Row="4" Grid.Column="1" Margin="10" Height="20"/>
 
-
-            <Button Content="Neu" Grid.Row="5" Grid.Column="1" Margin="10" Height="20"/>
+            <Button Content="Neu" Grid.Row="5" Grid.Column="1" Margin="10" Height="20" Click="Button_Click"/>
         </Grid>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
@@ -49,15 +48,15 @@
                 <RowDefinition Height="*" MaxHeight="50"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            
-            <DataGrid  Grid.Row="0" Margin="10"/>
+
+            <DataGrid x:Name="dgrGrid" Grid.Row="0" Margin="10"/>
             <StackPanel Grid.Row="1" Margin="10" Orientation="Horizontal" HorizontalAlignment="Right">
                 <Button Content="Löschen" Margin="5" HorizontalAlignment="Right"/>
                 <Button Content="Zeichnen" Margin="5" HorizontalAlignment="Right"/>
             </StackPanel>
         
             <Border Grid.Row="2" BorderThickness="5" BorderBrush="Black" CornerRadius="20" Margin="10">
-                <Canvas HorizontalAlignment="Stretch" Margin="20" VerticalAlignment="Top" Width="426"/>
+                <Canvas x:Name="cvsCanvas" HorizontalAlignment="Stretch" Margin="20" VerticalAlignment="Top" Width="426"/>
             </Border>
 
         </Grid>

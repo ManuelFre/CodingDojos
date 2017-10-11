@@ -20,9 +20,21 @@ namespace Inhouse_GUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        private List<GeoObject> Shapes = new List<GeoObject>();
         public MainWindow()
         {
             InitializeComponent();
+            cboForm.ItemsSource = new List<string>() { "Rechteck", "Kreis" };
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Shapes.Add(new GeoObject(
+                cboForm.SelectedItem.ToString(),
+                int.Parse(tboPosX.Text),
+                int.Parse(tboPosY.Text),
+                int.Parse(tboHeight.Text),
+                int.Parse(tboWidth.Text)));
         }
     }
 }
