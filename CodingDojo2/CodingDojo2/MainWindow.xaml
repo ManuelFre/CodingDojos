@@ -16,11 +16,12 @@
         </Grid.ColumnDefinitions>
         <Grid HorizontalAlignment="stretch" VerticalAlignment="Stretch" ShowGridLines="false" Grid.Column="0">
             <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
-                <WrapPanel HorizontalAlignment="center" VerticalAlignment="Top" DockPanel.Dock="top">
-                    <Border BorderThickness="2" BorderBrush="Red"/>
-                    <Image x:Name="Warning" Source="Images\Warning-WF.png"  HorizontalAlignment="center" VerticalAlignment="center" Height="20" Width="20"/>
-                    <Label Content="Überlauf Grauwasser" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-                </WrapPanel>
+                <Border BorderThickness="2" BorderBrush="Red" VerticalAlignment="Top" DockPanel.Dock="top" Margin="20,5,20,5">
+                    <WrapPanel  HorizontalAlignment="Center" >
+                        <Image x:Name="Warning" Source="Images\Warning-WF.png"  HorizontalAlignment="center" VerticalAlignment="center" Height="20" Width="20"/>
+                        <Label Content="Überlauf Grauwasser" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                    </WrapPanel>
+                </Border>
                 <Label Content="...to be done..."  HorizontalAlignment ="Center" VerticalAlignment ="Center" Foreground="White"/>
             </DockPanel>
         </Grid>
