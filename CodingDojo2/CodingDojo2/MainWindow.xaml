@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="480.3" Width="525"
         Background="Black">
-    <Grid VerticalAlignment="Stretch" Margin="0,0,0,0" ShowGridLines="true">
+    <Grid VerticalAlignment="Stretch" Margin="0,0,0,0">
         <!--<StackPanel  Margin="0,0,0,0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Orientation="Vertical"/>-->
         <!--<StackPanel HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="100">-->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="120"/>
         </Grid.ColumnDefinitions>
         <Grid HorizontalAlignment="stretch" VerticalAlignment="Stretch" ShowGridLines="false" Grid.Column="0">
             <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
@@ -25,7 +25,7 @@
                 <Label Content="...to be done..."  HorizontalAlignment ="Center" VerticalAlignment ="Center" Foreground="White"/>
             </DockPanel>
         </Grid>
-        <Grid HorizontalAlignment="Right" VerticalAlignment="Stretch" ShowGridLines="false" Grid.Column="1">
+        <Grid HorizontalAlignment="Right" VerticalAlignment="Stretch" Grid.Column="1">
                 <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -40,100 +40,100 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="*" MaxHeight="25"/>
+                <RowDefinition Height="*" MaxHeight="25"/>
             </Grid.RowDefinitions>
             
-            <Grid Grid.Row="0" VerticalAlignment="Top">
+            <Grid Grid.Row="0" >
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="30"/>
-                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="80"/>
                 </Grid.ColumnDefinitions>
-                <Image x:Name="TemperatureImage" Source="Images\Rain-WF.png" Grid.Column="0" Height="20" Width="20" HorizontalAlignment="center" VerticalAlignment="center"/>
+                <Image x:Name="TemperatureImage" Source="Images\Rain-WF.png" Grid.Column="0" Height="25" Width="25" HorizontalAlignment="center" VerticalAlignment="center"/>
                 <Label x:Name="TemperatureText" Grid.Column="1" Content="25 °" Foreground="White" HorizontalAlignment="left"  VerticalAlignment="Center"/>
             </Grid>
             
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="30"/>
-                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="80"/>
                 </Grid.ColumnDefinitions>
-                <Image x:Name="WindImage" Source="Images\Wind.png" Grid.Column="0" Height="20" Width="20" HorizontalAlignment="center" VerticalAlignment="center"/>
+                <Image x:Name="WindImage" Source="Images\Wind.png" Grid.Column="0" Height="25" Width="25" HorizontalAlignment="center" VerticalAlignment="center"/>
                 <Label x:Name="WindText" Grid.Column="1" Content="5 km/h" Foreground="White" HorizontalAlignment="left"  VerticalAlignment="Center"/>
             </Grid>
             <Border Grid.Row="1"  BorderThickness="0,0,0,2" BorderBrush="White"/>
             <Grid Grid.Row="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="30"/>
-                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="80"/>
                 </Grid.ColumnDefinitions>
-                <Image x:Name="PVImage" Source="Images\Solar.png" Grid.Column="0" Height="20" Width="20" HorizontalAlignment="center" VerticalAlignment="center"/>
+                <Image x:Name="PVImage" Source="Images\Solar.png" Grid.Column="0" Height="25" Width="25" HorizontalAlignment="center" VerticalAlignment="center"/>
                 <Label x:Name="PVText" Grid.Column="1" Content="200 W" Foreground="White" HorizontalAlignment="left"  VerticalAlignment="Center"/>
             </Grid>
             
             <Grid Grid.Row="3">
 
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="30"/>
-                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="80"/>
                 </Grid.ColumnDefinitions>
-                <Image x:Name="PeopleImage" Source="Images\Man-01.png" Grid.Column="0" Height="20" Width="20" HorizontalAlignment="center" VerticalAlignment="center"/>
+                <Image x:Name="PeopleImage" Source="Images\Man-01.png" Grid.Column="0" Height="25" Width="25" HorizontalAlignment="center" VerticalAlignment="center"/>
                 <Label x:Name="PeopleText" Grid.Column="1" Content="0" Foreground="White" HorizontalAlignment="left"  VerticalAlignment="Center"/>
 
             </Grid>
             
             <Grid Grid.Row="4">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="30"/>
-                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="80"/>
                 </Grid.ColumnDefinitions>
-                <Image x:Name="LockImage" Source="Images\Lock-WF.png" Grid.Column="0" Height="20" Width="20" HorizontalAlignment="center" VerticalAlignment="center"/>
+                <Image x:Name="LockImage" Source="Images\Lock-WF.png" Grid.Column="0" Height="25" Width="25" HorizontalAlignment="center" VerticalAlignment="center"/>
                 <Label x:Name="LockText" Grid.Column="1" Content="OK" Foreground="White" HorizontalAlignment="left"  VerticalAlignment="Center"/>
             </Grid>
             <Border Grid.Row="4"  BorderThickness="0,0,0,2" BorderBrush="White"/>
             <Grid Grid.Row="5">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="30"/>
-                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="80"/>
                 </Grid.ColumnDefinitions>
-                <Image x:Name="MailImage" Source="Images\Message Mail-WF.png" Grid.Column="0" Height="20" Width="20" HorizontalAlignment="center" VerticalAlignment="center"/>
+                <Image x:Name="MailImage" Source="Images\Message Mail-WF.png" Grid.Column="0" Height="25" Width="25" HorizontalAlignment="center" VerticalAlignment="center"/>
                 <Label x:Name="MailText" Grid.Column="1" Content="10" Foreground="White" HorizontalAlignment="left"  VerticalAlignment="Center"/>
             </Grid>
             <Grid Grid.Row="6">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="30"/>
-                    <ColumnDefinition Width="70"/>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="80"/>
                 </Grid.ColumnDefinitions>
-                <Image x:Name="TasksImage" Source="Images\Tasks.png" Grid.Column="0" Height="20" Width="20" HorizontalAlignment="center" VerticalAlignment="center"/>
+                <Image x:Name="TasksImage" Source="Images\Tasks.png" Grid.Column="0" Height="25" Width="25" HorizontalAlignment="center" VerticalAlignment="center"/>
                 <Label x:Name="TasksText" Grid.Column="1" Content="0" Foreground="White" HorizontalAlignment="left"  VerticalAlignment="Center"/>
             </Grid>
             <Border Grid.Row="6"  BorderThickness="0,0,0,2" BorderBrush="White"/>
             <Grid Grid.Row="7" VerticalAlignment="Stretch">
                 <!--<StackPanel HorizontalAlignment="Stretch" Margin="2,2,2,2" VerticalAlignment="Stretch">-->
-                <Button x:Name="Overview" Content="Übersicht" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5"/>
+                <Button x:Name="Overview" Content="Übersicht" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5" Background="Black" Foreground="White"/>
 
                 <!--</StackPanel>-->
             </Grid>
             <Grid Grid.Row="8" VerticalAlignment="Stretch">
-                <Button x:Name="Rooms" Content="Räume" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5"/>
+                <Button x:Name="Rooms" Content="Räume" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5" Background="Black" Foreground="White"/>
             </Grid>
             <Grid Grid.Row="9" VerticalAlignment="Stretch">
-                <Button x:Name="Tools" Content="Geräte" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5"/>
+                <Button x:Name="Tools" Content="Geräte" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5" Background="Black" Foreground="White"/>
             </Grid>
             <Grid Grid.Row="10" VerticalAlignment="Stretch">
-                <Button x:Name="Buildings" Content="Gebäude" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5"/>
+                <Button x:Name="Buildings" Content="Gebäude" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5" Background="Black" Foreground="White"/>
             </Grid>
             <Grid Grid.Row="11" VerticalAlignment="Stretch">
-                <Button x:Name="Safety" Content="Sicherheit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5"/>
+                <Button x:Name="Safety" Content="Sicherheit" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5" Background="Black" Foreground="White"/>
             </Grid>
             <Grid Grid.Row="12" VerticalAlignment="Stretch">
-                <Button x:Name="Multimedia" Content="Multimedia" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5"/>
+                <Button x:Name="Multimedia" Content="Multimedia" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5,5,5,5" Background="Black" Foreground="White" />
             </Grid>
             
             <Border Grid.Row="12"  BorderThickness="0,0,0,2" BorderBrush="White"/>
             
             <Grid Grid.Row="13">
-                <StackPanel HorizontalAlignment="Stretch" Margin="2,2,2,2" VerticalAlignment="Stretch" Orientation="Horizontal">
+                <StackPanel HorizontalAlignment="Stretch" Margin="2,2,2,2" VerticalAlignment="Stretch" Orientation="Horizontal" Height="30">
                     <Image x:Name="Bell" Source="Images\Bell New-WF.png"  HorizontalAlignment="center" VerticalAlignment="center"/>
                     <Image x:Name="SpeakerDecrease" Source="Images\Speaker Decrease - 01.png"  HorizontalAlignment="center" VerticalAlignment="center"/>
                     <Label x:Name="SpeakerValue" Content="4" Foreground="White" HorizontalAlignment="center"  VerticalAlignment="Center"/>
