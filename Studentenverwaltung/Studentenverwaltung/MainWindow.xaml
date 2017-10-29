@@ -1,0 +1,62 @@
+﻿<Window x:Class="Studentenverwaltung.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Studentenverwaltung"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="684.634">
+
+    <TabControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+        <TabItem Header="Studierende">
+            <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="0">
+                    <StackPanel HorizontalAlignment="left" VerticalAlignment="Top"  Orientation="Vertical"  >
+                        <Label Content="Vorname" Margin="0,5,0,5"/>
+                        <Label Content="Nachname" Margin="0,5,0,5"/>
+                        <Label Content="Alter" Margin="0,5,0,5"/>
+                        <Label Content="Studiengang" Margin="0,5,0,5"/>
+                        <Label Content="Beitrag bez." Margin="0,5,0,5"/>
+                    </StackPanel>
+                    <StackPanel HorizontalAlignment="right" VerticalAlignment="Top"  Orientation="Vertical" MinWidth="100" >
+                        <TextBox x:Name="TboVn"  Margin="0,5,0,5" Height="26"/>
+                        <TextBox x:Name="TboNn" Margin="0,5,0,5" Height="26"/>
+                        <TextBox x:Name="TboAge" Margin="0,5,0,5" Height="26"/>
+                        <ComboBox x:Name="CboStudy" Margin="0,5,0,5" Height="26"/>
+                        <CheckBox x:Name="CbxPayed" Margin="0,5,0,5" HorizontalAlignment="center"/>
+                    </StackPanel>
+                    
+                    </StackPanel>
+                    <Button x:Name="BtnSave" Content="Speichern" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10"/>
+                </StackPanel>
+
+                <DataGrid Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Top" MinHeight="200" />
+                <StackPanel Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="70" Orientation="Horizontal">
+                    <Button Content="Editieren" Height="25" Margin="10" Width="80"/>
+                    <Button Content="Löschen" Height="25" Margin="10" Width="80"/>
+                </StackPanel>
+            </Grid>
+
+        </TabItem>
+        <TabItem Header="Stammdaten">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel>
+                    <TextBox x:Name="TboStudy" Grid.Column="0" Margin="20" />
+                    <Button x:Name="BtnSaveStudy" Content="Speichern" Margin="40,0,40,0" Click="BtnSaveStudy_Click"/>
+                </StackPanel>
+                <ListBox x:Name="DgrStudy" Grid.Column="1" Margin="20"/>
+
+            </Grid>
+        </TabItem>
+    </TabControl>
+
+</Window>
